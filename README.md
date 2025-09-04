@@ -122,6 +122,44 @@ PORT=3001 npm start
 **Superuser:**
 - Email: `superuser@admin.com` | Password: `changeme123`
 
+### Understanding the Superuser System
+
+The superuser account is **NOT** stored in the database. Instead, it uses a configuration-based authentication system:
+
+1. **No Database Record**: The superuser doesn't exist in the `users` table - it's authenticated against configuration values
+2. **Configuration-Based**: Credentials are stored in Rails configuration, not in the database
+3. **Separate Login Endpoint**: Uses `/api/v1/auth/superuser/login` instead of the regular login endpoint
+4. **Different JWT Token**: Contains `{ is_superuser: true }` instead of a user_id
+5. **One Superuser Only**: The system supports exactly one superuser account
+
+### Configuring Superuser Credentials
+
+#### Method 1: Environment Variables (Recommended for Production)
+```bash
+export SUPERUSER_EMAIL="your-admin@example.com"
+export SUPERUSER_PASSWORD="your-secure-password"
+```
+
+#### Method 2: Rails Credentials (Most Secure)
+```bash
+EDITOR="code --wait" rails credentials:edit
+```
+Add:
+```yaml
+superuser:
+  email: your-admin@example.com
+  password: your-secure-password
+```
+
+#### Method 3: Direct Configuration (Development)
+Edit `config/initializers/app_config.rb`:
+```ruby
+Rails.application.config.superuser_email = 'your-admin@example.com'
+Rails.application.config.superuser_password = 'your-secure-password'
+```
+
+**Note**: After changing superuser credentials, restart the Rails server for changes to take effect.
+
 ## 📚 API Documentation
 
 ### Authentication Endpoints
