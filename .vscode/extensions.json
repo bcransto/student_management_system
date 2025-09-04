@@ -1,0 +1,51 @@
+{
+  "recommendations": [
+    // Ruby and Rails essentials
+    "shopify.ruby-lsp",                     // Official Ruby LSP by Shopify
+    "castwide.solargraph",                  // Ruby IntelliSense and documentation
+    "kaiwood.endwise",                      // Auto-add 'end' in Ruby blocks
+    
+    // Rails specific
+    "vortizhe.simple-ruby-erb",            // ERB syntax highlighting
+    "aliariff.vscode-erb-beautify",        // ERB formatter
+    "ninoseki.vscode-gem-lens",            // Shows gem versions inline
+    
+    // Database
+    "mtxr.sqltools",                       // SQL tools
+    "mtxr.sqltools-driver-mysql",          // MySQL driver for SQL tools
+    
+    // Code quality
+    "misogi.ruby-rubocop",                 // Rubocop linter integration
+    "testdouble.vscode-standard-ruby",     // StandardRB linter
+    
+    // Rails navigation
+    "sporto.rails-go-to-spec",             // Jump between code and tests
+    
+    // Development tools
+    "esbenp.prettier-vscode",              // Code formatter
+    "dbaeumer.vscode-eslint",              // JavaScript linter (for any JS in your Rails app)
+    "editorconfig.editorconfig",           // EditorConfig support
+    
+    // Git
+    "eamodio.gitlens",                     // Advanced Git features
+    
+    // General productivity
+    "christian-kohler.path-intellisense",   // Autocomplete file paths
+    "formulahendry.auto-rename-tag",       // Auto rename HTML tags
+    "naumovs.color-highlight",             // Highlight colors in code
+    "wayou.vscode-todo-highlight",         // Highlight TODOs and FIXMEs
+    "gruntfuggly.todo-tree",               // TODO tree view
+    
+    // API development
+    "humao.rest-client",                   // Test REST APIs directly in VS Code
+    "rangav.vscode-thunder-client",        // Alternative REST client
+    
+    // YAML support (for database.yml, etc.)
+    "redhat.vscode-yaml"                   // YAML language support
+  ],
+  
+  "unwantedRecommendations": [
+    "rebornix.ruby",  // Deprecated - use shopify.ruby-lsp instead
+    "wingrunr21.vscode-ruby"  // Deprecated - use shopify.ruby-lsp instead
+  ]
+}

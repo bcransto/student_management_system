@@ -1,0 +1,80 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Rails server",
+      "type": "Ruby",
+      "request": "launch",
+      "program": "${workspaceRoot}/bin/rails",
+      "args": ["server"],
+      "showDebuggerOutput": true,
+      "env": {
+        "PATH": "/Users/bcransto/.rbenv/shims:${env:PATH}"
+      }
+    },
+    {
+      "name": "Rails console",
+      "type": "Ruby",
+      "request": "launch",
+      "program": "${workspaceRoot}/bin/rails",
+      "args": ["console"],
+      "showDebuggerOutput": true,
+      "env": {
+        "PATH": "/Users/bcransto/.rbenv/shims:${env:PATH}"
+      }
+    },
+    {
+      "name": "RSpec - all tests",
+      "type": "Ruby",
+      "request": "launch",
+      "program": "${workspaceRoot}/bin/rspec",
+      "args": [],
+      "showDebuggerOutput": true,
+      "env": {
+        "PATH": "/Users/bcransto/.rbenv/shims:${env:PATH}"
+      }
+    },
+    {
+      "name": "RSpec - current file",
+      "type": "Ruby",
+      "request": "launch",
+      "program": "${workspaceRoot}/bin/rspec",
+      "args": ["${file}"],
+      "showDebuggerOutput": true,
+      "env": {
+        "PATH": "/Users/bcransto/.rbenv/shims:${env:PATH}"
+      }
+    },
+    {
+      "name": "Minitest - all tests",
+      "type": "Ruby",
+      "request": "launch",
+      "program": "${workspaceRoot}/bin/rails",
+      "args": ["test"],
+      "showDebuggerOutput": true,
+      "env": {
+        "PATH": "/Users/bcransto/.rbenv/shims:${env:PATH}"
+      }
+    },
+    {
+      "name": "Minitest - current file",
+      "type": "Ruby",
+      "request": "launch",
+      "program": "${workspaceRoot}/bin/rails",
+      "args": ["test", "${file}"],
+      "showDebuggerOutput": true,
+      "env": {
+        "PATH": "/Users/bcransto/.rbenv/shims:${env:PATH}"
+      }
+    },
+    {
+      "name": "Attach to Rails server",
+      "type": "Ruby",
+      "request": "attach",
+      "remoteHost": "127.0.0.1",
+      "remotePort": "1234",
+      "remoteWorkspaceRoot": "${workspaceRoot}",
+      "showDebuggerOutput": true
+    }
+  ]
+}

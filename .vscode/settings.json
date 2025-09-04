@@ -1,0 +1,82 @@
+{
+  // Ruby and Rails configuration
+  "ruby.useBundler": true,
+  "ruby.useLanguageServer": true,
+  "ruby.lint": {
+    "rubocop": true,
+    "reek": false,
+    "fasterer": false
+  },
+  "ruby.format": "rubocop",
+  
+  // Solargraph settings for better Ruby IntelliSense
+  "solargraph.useBundler": true,
+  "solargraph.diagnostics": true,
+  "solargraph.completion": true,
+  "solargraph.hover": true,
+  "solargraph.formatting": true,
+  
+  // File associations
+  "files.associations": {
+    "*.erb": "erb",
+    "*.html.erb": "erb",
+    "Gemfile": "ruby",
+    "Gemfile.lock": "ruby",
+    "*.rb": "ruby",
+    "*.rake": "ruby",
+    "*.ru": "ruby",
+    "*.jbuilder": "ruby"
+  },
+  
+  // Editor settings for Rails
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.formatOnSave": false,
+  "editor.formatOnPaste": false,
+  "editor.wordWrap": "on",
+  
+  // Emmet support for ERB files
+  "emmet.includeLanguages": {
+    "erb": "html"
+  },
+  
+  // Terminal settings
+  "terminal.integrated.env.osx": {
+    "PATH": "/Users/bcransto/.rbenv/shims:${env:PATH}"
+  },
+  
+  // Files to exclude from explorer
+  "files.exclude": {
+    "**/.git": true,
+    "**/.DS_Store": true,
+    "**/log": true,
+    "**/tmp": true,
+    "**/.bundle": true,
+    "**/vendor/bundle": true,
+    "**/node_modules": true
+  },
+  
+  // Search exclusions
+  "search.exclude": {
+    "**/log": true,
+    "**/tmp": true,
+    "**/vendor": true,
+    "**/coverage": true,
+    "**/.bundle": true,
+    "**/node_modules": true,
+    "Gemfile.lock": true
+  },
+  
+  // Rails specific
+  "[ruby]": {
+    "editor.defaultFormatter": "misogi.ruby-rubocop",
+    "editor.formatOnSave": false,
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true
+  },
+  
+  "[erb]": {
+    "editor.defaultFormatter": "aliariff.vscode-erb-beautify",
+    "editor.formatOnSave": false
+  }
+}
